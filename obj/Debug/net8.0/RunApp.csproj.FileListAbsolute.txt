@@ -118,6 +118,7 @@ C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.csproj.CoreCompileInputs.cache
 C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.RazorAssemblyInfo.cache
 C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.RazorAssemblyInfo.cs
+C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.sourcelink.json
 C:\Users\hp\RunApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\hp\RunApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\hp\RunApp\obj\Debug\net8.0\staticwebassets\msbuild.RunApp.Microsoft.AspNetCore.StaticWebAssets.props
@@ -134,3 +135,11 @@ C:\Users\hp\RunApp\obj\Debug\net8.0\refint\RunApp.dll
 C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.pdb
 C:\Users\hp\RunApp\obj\Debug\net8.0\RunApp.genruntimeconfig.cache
 C:\Users\hp\RunApp\obj\Debug\net8.0\ref\RunApp.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\CloudinaryDotNet.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\hp\RunApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
