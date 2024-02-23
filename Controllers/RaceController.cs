@@ -11,12 +11,14 @@ namespace RunApp.Controllers
     public class RaceController : Controller
     {
         private readonly IRaceRepository _raceRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IPhotoService _photoService;
 
-        public RaceController(IRaceRepository raceRepository, IPhotoService photoService)
+        public RaceController(IRaceRepository raceRepository, IPhotoService photoService,  IHttpContextAccessor httpContextAccessor)
         {
             _photoService = photoService;
             _raceRepository = raceRepository;
+            _httpContextAccessor = httpContextAccessor;
         }
         public async Task<IActionResult> Index()
         {
@@ -32,7 +34,9 @@ namespace RunApp.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var curUserID = _httpContextAccessor.HttpContext?.User.GetUserId();
+            var createRaceViewModel = new CreateRaceViewModel{AppUserId = curUserID};
+            return View(createRaceViewModel);
         }
 
         [HttpPost]
@@ -47,6 +51,7 @@ namespace RunApp.Controllers
                     Title = raceVM.Title,
                     Description = raceVM.Description,
                     Image = result.Url.ToString(),
+                    AppUserId = raceVM.AppUserId,
                     Address = new Address
                     {
                         Street = raceVM.Address.Street,
@@ -123,6 +128,22 @@ namespace RunApp.Controllers
             {
                 return View(raceVM);
             }
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var raceDetails = await _raceRepository.GetByIdAsync(id);
+            if(raceDetails == null) return View("Error");
+            return View(raceDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteRace(int id)
+        {
+            var raceDetails = await _raceRepository.GetByIdAsync(id);
+            if(raceDetails == null) return View("Error");
+            _raceRepository.Delete(raceDetails);
+            return RedirectToAction("Index");
         }
 
     }

@@ -22,7 +22,7 @@ namespace RunApp.Repository
         {
             _context.Remove(race);
             return Save();
-        }
+        } 
 
         public async Task<IEnumerable<Race>> GetAll()
         {
